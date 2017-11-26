@@ -217,6 +217,10 @@ int pcm_wait(struct pcm *pcm, int timeout);
  */
 int pcm_set_avail_min(struct pcm *pcm, int avail_min);
 
+#ifdef SPRD_HARDWARE
+int pcm_set_samplerate(struct pcm *pcm, unsigned int flags, struct pcm_config *config, unsigned short samplerate);
+#endif
+
 /*
  * MIXER API
  */
